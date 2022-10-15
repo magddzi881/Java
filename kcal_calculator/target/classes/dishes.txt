@@ -1,0 +1,10 @@
+List of Meals/Indigrients kcal per 100g: 
+1 ser 30
+2 maslo 5
+3 kielbasa 90
+4 sok 12
+5 lizak 120
+6 flaki 300
+7 jogurt 450
+8 salata 20
+9 alga 50
