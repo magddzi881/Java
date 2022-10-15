@@ -7,7 +7,7 @@ import viewPackage.MenuTexts;
  * @author Magdalena_Dziubosz
  * @version 11
  */
-
+//test
 public class Kcal_calculator {
 
    
