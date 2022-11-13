@@ -1,1 +1,1 @@
-# Java kilocalories calculator
+# Java kilocalories calculators
