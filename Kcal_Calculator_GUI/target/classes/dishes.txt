@@ -1,0 +1,8 @@
+Meals list:
+1 jajecznica 150
+2 salatka 200
+3 pizza 890
+4 kebab 1023
+5 sok 40
+6 flaki 450
+7 bigos 760

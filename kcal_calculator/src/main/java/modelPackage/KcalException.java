@@ -1,6 +1,9 @@
 package modelPackage;
 
-// exception for kilocalories value
+/**
+ * exception for kilocalories value
+ *
+ */ 
 
 public class KcalException extends Exception {
 

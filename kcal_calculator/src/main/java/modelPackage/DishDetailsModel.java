@@ -1,15 +1,26 @@
 package modelPackage;
 
-// dish/meal model with data getters and setters
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+/** main dish/meal model with data getters and setters */ 
 
 
 public class DishDetailsModel {
 
-  private int id;
-  private int kcal; // kcal per 100g
-  private String name;
+   /** meal id number */
+  private Object id;
+  /** meal total kilocalories per 100g */
+  private Object kcal; 
+  /** meal name*/
+  private String name; 
+  /** list of meals*/
+  private Set<IngredientModel> ingredients = new LinkedHashSet<>(); 
 
-  public DishDetailsModel(int id, String name, int kcal) {
+  /** main dish constructor */
+  public DishDetailsModel(Object id, String name, Object kcal) {
     this.name = name;
     this.kcal = kcal;
     this.id = id;
@@ -17,38 +28,45 @@ public class DishDetailsModel {
 
   
   /** 
+   * method used to get id
    * @return int
    */
   public int getId() {
+    return (int) id;
+  }
+
+  
+  /** 
+   * method used to set dish id
+   * @param id
+   */
+  public int setId(int id) {
+    this.id = id;
     return id;
   }
 
   
   /** 
-   * @param id
+   * method used to get kcal
+   * @return int
    */
-  public void setId(int id) {
-    this.id = id;
+  public int getKcal() {
+    return (int) kcal;
   }
 
   
   /** 
-   * @return int
+   * method used to set dish kcal
+   * @param kcal
    */
-  public int getKcal() {
+  public int setKcal(int kcal) {
+    this.kcal = kcal;
     return kcal;
   }
 
   
   /** 
-   * @param kcal
-   */
-  public void setKcal(int kcal) {
-    this.kcal = kcal;
-  }
-
-  
-  /** 
+   * method used to get name
    * @return String
    */
   public String getName() {
@@ -57,10 +75,66 @@ public class DishDetailsModel {
 
   
   /** 
+   * method used to set dish name
    * @param name
    */
   public void setName(String name) {
     this.name = name;
   }
+
+  
+  /** 
+   * method used to get collection of ingredients
+   * @return Set
+   */
+  public Set<IngredientModel> getIngredientsList(){
+    return ingredients;
+  }
+
+
+/** 
+ * method used to add ingredients to list
+ * @param model
+ */
+public void addToIngredientsSet(IngredientModel model){
+  getIngredientsList().add(model);
+}
+
+/** 
+ * method used to remove ingredients from list
+ * @param model
+ */
+public void removeToIngredientsSet(IngredientModel model){
+  getIngredientsList().remove(model);
+}
+
+/** 
+ * method used to get a list of ingredient names
+ * @param model
+ * @return List
+ */
+public List<String> namesFromSet(DishDetailsModel model){
+
+  Set<IngredientModel> list = model.getIngredientsList();
+
+  List<String> names = list.stream().map(IngredientModel::getName).collect(Collectors.toList());
+
+  return names;
+}
+
+/** 
+ * method used to get a list of ingredient quantity
+ * @param model
+ * @return List
+ */
+public List<Integer> quantityFromSet(DishDetailsModel model){
+
+  Set<IngredientModel> list = model.getIngredientsList();
+
+  List<Integer> quantity = list.stream().map(IngredientModel::getQuantity).collect(Collectors.toList());
+
+  return quantity;
+}
+
 
 }

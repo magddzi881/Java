@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.Scanner;
 
-// calcuate total kilocalories per one meal
+/** get total kilocalories per one meal*/ 
 
 public class GetOneMealKcalData {
 
@@ -15,6 +15,7 @@ public class GetOneMealKcalData {
      * @param id
      * @return Integer
      */
+    /** returns total kcal per dish, using its id*/ 
     public Integer getOneMealKcalData(int id) {
 
         int result = 0;

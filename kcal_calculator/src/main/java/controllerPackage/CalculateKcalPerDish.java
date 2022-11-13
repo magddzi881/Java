@@ -5,8 +5,11 @@ import java.util.Scanner;
 import  viewPackage.MenuTexts;
 import  viewPackage.DisplayMealList;
 
+/** method used to calculate total meal calories */
+
 public class CalculateKcalPerDish {
 
+    /** method used to calculate total meal calories */
     public void calculateTotalCalories() {
 
         int i = -1;

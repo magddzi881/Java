@@ -1,0 +1,8 @@
+
+sok: t-6 h-8 woda-4 owoc-3 
+bigos: t-6 e-3 
+pizza: name-6 pomidor-2 ser-4 
+jajecznica: jajko-4 sol-1 
+flaki: drftgyhj-65 r-4 r4-4 
+kebab: 54-7 
+lizak: cukier-2 slodzik-1 

@@ -1,0 +1,6 @@
+
+sok: t-6 o-6 
+bigos: t-6 o-6 
+pizza: name-6 
+jajecznica: jajko-4 sol-1 
+flaki: drftgyhj-65 

@@ -1,0 +1,6 @@
+
+bigos: t-6 o-6 
+jajecznica: jajko-4 sol-1 
+flaki: sok-3 kola-5 maslo-6 lizak-1 
+sok: test-1 sok-1 
+pizza: cebula-7 pomidor-5 ser-4 

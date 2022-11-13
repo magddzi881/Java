@@ -1,9 +1,11 @@
 package  viewPackage;
 
-//console menu texts
 
+/** console menu texts  */
 public class MenuTexts {
 
+    
+/** main menu interface text  */
     public void mainMenuText() {
 
         System.out.println("===========================");
@@ -14,11 +16,14 @@ public class MenuTexts {
         System.out.println("3. Display meal list");
         System.out.println("4. Calculate the daily caloric requirement");
         System.out.println("5. Remove dish from list");
+        System.out.println("6. Display all ingredients list");
         System.out.println("0. Exit");
         System.out.println("===========================");
 
     }
 
+    
+/** calculator text  */
     public void calculatorMenu() {
 
         System.out.println("===========================");
@@ -28,7 +33,7 @@ public class MenuTexts {
         System.out.println("===========================");
 
     };
-
+/** recomended kcal calculator text  */
     public void recommendedKcalMenu() {
 
         System.out.println("===========================");
@@ -40,6 +45,7 @@ public class MenuTexts {
 
     }
 
+    /** parameters syntax error text  */
     public void displayParametersError() {
 
         System.out.println("=================================================================================");
@@ -49,6 +55,7 @@ public class MenuTexts {
 
     }
 
+    /** help text  */
     public void displayHelpInfo() {
 
         System.out.println("=================================================================================");

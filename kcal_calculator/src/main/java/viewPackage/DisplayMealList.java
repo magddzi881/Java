@@ -1,34 +1,38 @@
 package viewPackage;
 
-import java.util.List;
+import java.util.Set;
+import java.util.function.Consumer;
 
 import controllerPackage.GetMealList;
 import modelPackage.DishDetailsModel;
 
-//display dish list on screen
 
+/** display dish list on screen */
 public class DisplayMealList {
 
     
-    /** 
-     * @return List
-     */
-    public List<DishDetailsModel> displayMealList() {
+   
+
+     /**function that displays main meal list */
+    public void displayMealList() {
 
         GetMealList getMealList = new GetMealList();
-        List<DishDetailsModel> dishDetailsList = getMealList.getMealList();
+        Set<DishDetailsModel> dishDetailsList = getMealList.getMealList();
 
         System.out.println("===========================");
-
-        for (int i = 0; i < dishDetailsList.size(); i++) {
-            System.out.print(dishDetailsList.get(i).getId() + " ");
-            System.out.print(dishDetailsList.get(i).getName() + " ");
-            System.out.print(dishDetailsList.get(i).getKcal() + " \n");
-        }
-
+        
+        //lambda
+        Consumer<? super DishDetailsModel> dishConsumer = dish ->
+     {
+        System.out.print(dish.getId() + " ");
+        System.out.print(dish.getName() + " ");
+        System.out.print(dish.getKcal() + " \n");
+     };
+        dishDetailsList.forEach(dishConsumer);
+      
         System.out.println("===========================");
 
-        return dishDetailsList;
+        
 
     }
 }

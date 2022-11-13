@@ -9,21 +9,30 @@ import java.nio.file.Paths;
 import java.util.List;
 
 import  modelPackage.KcalException;
+import modelPackage.Number;
 
-// class used to write a new line of data to a text file
+/** class used to write a new line of data to a text file */ 
 
 public class AddNewDishToFile {
 
-    
     /** 
      * @param newName
      * @param newKcal
      */
+    /** method used to write a new line of data to a text file */ 
     public void addNewDishToFile(String newName, int newKcal) {
-        try {
+        
+        
+            if (isPositiveNumer(newKcal) != Number.POSITIVE) {
+               
+                    try {
 
-            if (newKcal < 0) {
-                throw new KcalException("Kilocalories must be entered as a positive number");
+                        throw new KcalException("Kilocalories must be entered as a positive number");
+
+                    } catch (KcalException e) {
+                        e.printStackTrace();
+                    }
+                
             } else {
 
                 try {
@@ -31,6 +40,9 @@ public class AddNewDishToFile {
                     List<String> allLines = Files.readAllLines(Paths.get("dishes.txt"));
                     FileWriter myWriter = new FileWriter("dishes.txt");
 
+            
+        
+                    //foreach
                     for (String line : allLines) {
 
                         myWriter.write(line + "\n");
@@ -47,10 +59,22 @@ public class AddNewDishToFile {
                 }
 
             }
-        } catch (KcalException ex) {
-            ex.printStackTrace();
-        }
+       
 
     }
+/** method used to check if a number is positive */
+public Number isPositiveNumer(int number){
+    Number newResult;
+     
+    if (number > 0) {
+   newResult = Number.POSITIVE;
+  } else if (number < 0) {
+   newResult = Number.NEGATIVE;
+  } else 
+   newResult = Number.ZERO;
 
+   return newResult;
+
+}
+    
 }

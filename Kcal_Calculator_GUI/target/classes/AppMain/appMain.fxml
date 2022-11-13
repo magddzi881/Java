@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.polsl.Controller.AppMainController">
+   <children>
+      <TableView fx:id="table" layoutX="20.0" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="507.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="46.0" resizable="false" text="Id" />
+          <TableColumn fx:id="nameCol" prefWidth="276.0" resizable="false" text="Name" />
+            <TableColumn fx:id="kcalCol" prefWidth="184.0" resizable="false" text="Kcal / 100g" />
+        </columns>
+      </TableView>
+      <Button fx:id="add" layoutX="345.0" layoutY="469.0" mnemonicParsing="false" onAction="#addNew" prefHeight="25.0" prefWidth="69.0" text="Add new" />
+      <Button fx:id="remove" layoutX="449.0" layoutY="469.0" mnemonicParsing="false" onAction="#removeOld" prefHeight="25.0" prefWidth="69.0" text="Remove" />
+      <Label layoutX="225.0" layoutY="14.0" text="List of dishes" />
+      <TableView fx:id="iTable" layoutX="20.0" layoutY="294.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="295.0">
+        <columns>
+          <TableColumn fx:id="iNameCol" prefWidth="148.0" resizable="false" text="Name" />
+          <TableColumn fx:id="iQuantityCol" minWidth="5.0" prefWidth="146.0" resizable="false" text="Quantity" />
+        </columns>
+      </TableView>
+      <Label fx:id="displayTitle" contentDisplay="CENTER" layoutX="73.0" layoutY="270.0" text="List of single meal indgredients" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" />
+      <TextField fx:id="takeName" layoutX="20.0" layoutY="238.0" prefHeight="25.0" prefWidth="240.0" promptText="Enter dish name to display ingredients list" />
+      <Button fx:id="show" layoutX="265.0" layoutY="238.0" mnemonicParsing="false" onAction="#showFunction" prefHeight="25.0" prefWidth="48.0" text="Show" />
+      <Line endX="-177.0" endY="199.0" layoutX="500.0" layoutY="295.0" startX="-177.0" startY="-52.0" />
+      <TextField fx:id="newName" layoutX="356.0" layoutY="275.0" promptText="Enter name" />
+      <TextField fx:id="newNumber" layoutX="357.0" layoutY="308.0" promptText="Enter number" />
+      <Label layoutX="346.0" layoutY="242.0" prefHeight="17.0" prefWidth="176.0" text="Actions witth meals/ingredients" />
+      <RadioButton fx:id="radio1" layoutX="357.0" layoutY="386.0" mnemonicParsing="false" onAction="#radioButtonAction" text="Meal actions" />
+      <RadioButton fx:id="radio2" layoutX="356.0" layoutY="409.0" mnemonicParsing="false" onAction="#radioButtonAction" text="Ingredient actions" />
+      <Label fx:id="help" layoutX="330.0" layoutY="439.0" prefHeight="17.0" prefWidth="208.0" textAlignment="CENTER" textFill="#bc29ad" />
+      <Label layoutX="604.0" layoutY="242.0" text="Daily kaloric requirement" />
+      <TextField fx:id="height" layoutX="566.0" layoutY="341.0" prefHeight="25.0" prefWidth="208.0" promptText="Enter your height (cm)" />
+      <TextField fx:id="age" layoutX="566.0" layoutY="427.0" prefHeight="25.0" prefWidth="208.0" promptText="Enter your age (years)" />
+      <TextField fx:id="weight" layoutX="566.0" layoutY="382.0" prefHeight="25.0" prefWidth="208.0" promptText="Enter your weight (kg)" />
+      <Button fx:id="calculate" layoutX="709.0" layoutY="469.0" mnemonicParsing="false" onAction="#getKcalResult" text="Calculate" />
+      <Label fx:id="kcalResult" layoutX="571.0" layoutY="473.0" prefHeight="17.0" prefWidth="121.0" />
+      <RadioButton fx:id="radio3" layoutX="566.0" layoutY="279.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="109.0" text="Woman" />
+      <RadioButton fx:id="radio4" layoutX="566.0" layoutY="312.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="109.0" text="Man" />
+      <TextField fx:id="newDishName" layoutX="357.0" layoutY="344.0" promptText="Enter dish name" />
+      <ScrollPane fx:id="newScroll" layoutX="656.0" layoutY="32.0" pannable="true" prefHeight="200.0" prefWidth="133.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="newList" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="8.0" layoutY="7.0" prefHeight="497.0" prefWidth="101.0" text="Nothing added" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Button fx:id="newAdd" layoutX="598.0" layoutY="95.0" mnemonicParsing="false" onAction="#newAddFunction" prefHeight="25.0" prefWidth="46.0" text="Add" />
+      <Label fx:id="newResult" layoutX="542.0" layoutY="179.0" prefHeight="53.0" prefWidth="101.0" text="Total: 0 kcal" />
+      <Label layoutX="540.0" layoutY="32.0" text="Calculate daily kcal" />
+      <TextField fx:id="newTextField" layoutX="538.0" layoutY="57.0" prefHeight="25.0" prefWidth="109.0" promptText="Enter dish name" />
+      <Button fx:id="newUndo" layoutX="598.0" layoutY="132.0" mnemonicParsing="false" onAction="#newUndoFunction" prefHeight="25.0" prefWidth="46.0" text="Del" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+-classpath
+'C:/Users/Lenovo/.m2/repository/org/openjfx/javafx-controls/13/javafx-controls-13.jar;C:/Users/Lenovo/.m2/repository/org/openjfx/javafx-controls/13/javafx-controls-13-win.jar;C:/Users/Lenovo/.m2/repository/org/openjfx/javafx-graphics/13/javafx-graphics-13.jar;C:/Users/Lenovo/.m2/repository/org/openjfx/javafx-graphics/13/javafx-graphics-13-win.jar;C:/Users/Lenovo/.m2/repository/org/openjfx/javafx-base/13/javafx-base-13.jar;C:/Users/Lenovo/.m2/repository/org/openjfx/javafx-base/13/javafx-base-13-win.jar;C:/Users/Lenovo/.m2/repository/org/openjfx/javafx-fxml/13/javafx-fxml-13.jar;C:/Users/Lenovo/.m2/repository/org/openjfx/javafx-fxml/13/javafx-fxml-13-win.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'11'
+-sourcepath
+'C:/Users/Lenovo/Desktop/Kcal_Calculator_GUI/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2022. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/Lenovo/Desktop/Kcal_Calculator_GUI/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Kcal_Calculator_GUI 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' 'C:/Users/Lenovo/Desktop/Kcal_Calculator_GUI/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'Kcal_Calculator_GUI 1.0-SNAPSHOT API'
